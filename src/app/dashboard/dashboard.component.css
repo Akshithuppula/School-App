@@ -1,0 +1,43 @@
+.parent {
+    height: 100vh;
+    width: 100vw;
+    /* background-color: rgb(189, 0, 0); */
+    overflow: hidden;
+    display: flex;
+}
+
+.left {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    height: 100%;
+    overflow: auto;
+    width: 20%;
+    background-color: rgb(41, 151, 202);
+}
+
+.right{
+   
+    height: 100%;
+    width: 80%;
+    overflow: auto;
+    
+    /* background-color: rgb(20, 172, 45); */
+}
+
+  button {
+    
+    height: 30px;
+    width: 150px;
+    border: 0px;
+    border-radius: 10px;
+    background-color: rgb(27, 27, 160);
+    color: white;
+} 
+h2:hover{
+    cursor: pointer;
+    background-color: aliceblue;
+    /* padding: 10px;
+    margin: 10px; */
+    text-align: center;
+    border-radius: 10px;
+}

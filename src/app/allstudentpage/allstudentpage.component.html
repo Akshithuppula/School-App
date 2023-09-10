@@ -1,0 +1,54 @@
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th> createdAt</th>
+            <th>name </th>
+            <th>avatar </th>
+            <th>id </th>
+            <th>percentage </th>
+            <th>class </th>
+            <th>email </th>
+            <th> password</th>
+            <th>male</th>
+            <th>female</th>
+            <th>comments</th>
+            <th>father name </th>
+            <th>dob </th>
+            <th>Hno </th>
+            <th>city</th>
+            <th>state </th>
+            <th>pin code </th>
+            <th> marks</th>
+            <th>type</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let a of student">
+            <td>{{a.createdAt}}</td>
+            <td>{{a.name}}</td>
+            <td>{{a.avatar}}</td>
+            <td>{{a.id}}</td>
+            <td>{{a.percentage}}</td>
+            <td>{{a.class}}</td>
+            <td>{{a.email}}</td>
+            <td>{{a.password}}</td>
+
+            <td>{{a.male}}</td>
+            <td>{{a.female}}</td>
+            <td>{{a.comments}}</td>
+            <td>{{a.fathername}}</td>
+            <td>{{a.dateofbirth}}</td>
+            <td>{{a.address}}</td>
+            <td>{{a.addressLine}}</td>
+
+
+            <td>{{a.city}}</td>
+            <td>{{a.state}}</td>
+
+            <td>{{a.pincode}}</td>
+
+
+
+        </tr>
+    </tbody>
+</table>
