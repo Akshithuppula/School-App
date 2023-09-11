@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CreatestudentService } from '../createstudent.service';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormArray, FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-createstudent',
@@ -19,8 +19,29 @@ export class CreatestudentComponent {
     city: new FormControl(),
     state: new FormControl(),
     pincode: new FormControl()
-  })
+  }),
+  marks: new FormArray([])
  });
+
+ get marksFormArray(){
+  return this.studentForm.get('marks') as FormArray;
+ }
+
+ addMarks(){
+  this.marksFormArray.push(
+    new FormGroup({
+      class: new FormControl(),
+      year: new FormControl(),
+      percentage: new FormControl()
+    })
+    )
+ }
+
+ deleteMark(i:number){
+  this.marksFormArray.removeAt(i);
+ }
+
+
 
  constructor(private createstudentService:CreatestudentService){}
 

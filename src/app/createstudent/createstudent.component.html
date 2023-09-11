@@ -19,20 +19,32 @@
         <input type="text" formControlName="bod">
         <br>
     
+        <button (click)="addMarks()">Add Marks</button>
+
         <div formGroupName="address">
 
-            <label>City</label>
-            <input type="text" formControlName="city">
-            <br>
+            <div *ngFor="let mark of marksFormArray.controls; let i = index">
 
-            <label>State :</label>
-            <input type="text" formControlName="State">
-            <br>
+                <div formGroupName="{{i}}">
 
-            <label>Pincode :</label>
-            <input type="text" formControlName="pincode">
-            <br>
+                    <label>Class</label>
+                    <input type="text" formControlName="class">
+                    <br>
+        
+                    <label>Year :</label>
+                    <input type="text" formControlName="year">
+                    <br>
+        
+                    <label>Percentage :</label>
+                    <input type="text" formControlName="percentage">
+                    <br>
+        
+                    <button (click)="deleteMark(i)">delete</button>
 
+                </div>
+
+            </div>
+           
         </div>
 
         <br><br>
