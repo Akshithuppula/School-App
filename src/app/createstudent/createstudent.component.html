@@ -32,7 +32,14 @@
             <br>
 
             <label>State:</label>
-            <input type="text" formControlName="state">
+           <select formControlName="State">
+            <option value="TS">Telangana</option>
+            <option value="Ap">Andra Pradesh</option>
+           </select>
+           <div class="text-danger" *ngIf="studentForm.get('address')?.touched && studentForm.get('State')?.invalid">
+            <p *ngIf="studentForm.get('address')?.get('State')?.errors?.['required']">state is required</p>
+
+           </div>
             <br>
 
             <label>PinCode:</label>
