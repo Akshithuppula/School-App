@@ -1,15 +1,15 @@
 <div class="parent">
     <!-- <img src="/assets/img1.png" alt=""> -->
     <div class="child">
-        <form>
+        <form [formGroup]="loginForm">
             <br>
         <h2>* Student Login Form *</h2>
         <br>
-        <input type="text" placeholder="enter mail">
+        <input type="text" placeholder="enter mail" formControlName="email">
         <br>
-        <input type="text" placeholder="enter Password">
+        <input type="text" placeholder="enter Password" formControlName="Password">
         <br>
-        <button routerLink="/dashboard">Login</button>
+        <button (click)="loginauthentication()">Login</button>
     </form>
     </div>
 </div>
