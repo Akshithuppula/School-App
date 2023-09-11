@@ -1,39 +1,40 @@
 .parent {
     height: 100vh;
     width: 100vw;
-    /* background-color: rgb(189, 0, 0); */
     overflow: hidden;
     display: flex;
+    background: linear-gradient(to left, #9796f0, #fbc7d4);
 }
 
 .left {
+    border: 1px solid grey;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     height: 100%;
     overflow: auto;
     width: 20%;
-    background-color: rgb(41, 151, 202);
+   
 }
 
-.right{
-   
+.right {
+    /* background: linear-gradient(to  right,#00c9ff,#92fe9d); */
+
     height: 100%;
     width: 80%;
     overflow: auto;
-    
-    /* background-color: rgb(20, 172, 45); */
 }
 
-  button {
-    
+button {
+
     height: 30px;
     width: 150px;
     border: 0px;
     border-radius: 10px;
     background-color: rgb(27, 27, 160);
     color: white;
-} 
-h2:hover{
+}
+
+h2:hover {
     cursor: pointer;
     background-color: aliceblue;
     /* padding: 10px;

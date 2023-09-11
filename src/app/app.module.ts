@@ -6,11 +6,11 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
-import { StudentpageComponent } from './studentpage/studentpage.component';
 import { AllstudentpageComponent } from './allstudentpage/allstudentpage.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { HttpClientModule } from '@angular/common/http'
 import { FormsModule } from '@angular/forms';
+import { CreatestudentComponent } from './createstudent/createstudent.component';
 
 @NgModule({
   declarations: [
@@ -18,9 +18,9 @@ import { FormsModule } from '@angular/forms';
     LoginComponent,
     DashboardComponent,
     HomeComponent,
-    StudentpageComponent,
     AllstudentpageComponent,
-    PagenotfoundComponent
+    PagenotfoundComponent,
+    CreatestudentComponent
   ],
   imports: [
     BrowserModule,
