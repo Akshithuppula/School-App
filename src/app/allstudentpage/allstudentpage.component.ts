@@ -9,7 +9,9 @@ import { AllstudentsService } from '../allstudents.service';
 export class AllstudentpageComponent {
 
   public student:any = [];
-  public term:any = [];
+  public term:any = '';
+  public column:any = "";
+  public order:any = "";
 
 
 
@@ -36,5 +38,24 @@ getfilterstudent(){
     }
   )
 }
+
+getsortbystudent(){
+  this.allstudentsService.getsortbystudent(this.column,this.order).subscribe(
+    (data:any)=>{
+      this.student = data;
+    },
+    (err:any)=>{
+      alert("Internal server error");
+    }
+  )
+}
+
+
+
+
+
+
+
+
 
 }

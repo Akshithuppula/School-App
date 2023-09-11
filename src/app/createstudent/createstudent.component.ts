@@ -8,16 +8,10 @@ import { CreatestudentService } from '../createstudent.service';
 })
 export class CreatestudentComponent {
 
-  // public createstudent:any=[];
-  // constructor(private createstudentService:CreatestudentService){
-  //   this.createstudent. getCreateStudent().subscribe(
-  //     (data:any)=>{
-  //       this.createstudent = data;
-  //     },
-  //     (err:any)=>{
-  //       alert("Internal server error")
-  //     }
-  //   )
-  // }
+  public student:any = [];
+
+ constructor(private createstudentService:CreatestudentService){}
+
+ 
 
 }
