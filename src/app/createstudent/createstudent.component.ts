@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CreatestudentService } from '../createstudent.service';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-createstudent',
@@ -8,10 +9,19 @@ import { CreatestudentService } from '../createstudent.service';
 })
 export class CreatestudentComponent {
 
-  public student:any = [];
+ public studentForm:FormGroup = new FormGroup({
+  name: new FormControl(),
+  class: new FormControl(),
+  fathername: new FormControl(),
+  email: new FormControl(),
+  bod: new FormControl(),
+  address: new FormGroup({
+    city: new FormControl(),
+    state: new FormControl(),
+    pincode: new FormControl()
+  })
 
- constructor(private createstudentService:CreatestudentService){}
-
+ })
  
 
 }

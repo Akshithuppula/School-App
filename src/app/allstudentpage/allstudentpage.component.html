@@ -35,24 +35,30 @@
 <table class="table table-bordered table-dark">
     <thead>
         <tr>
+            <th>Sno</th>
             <th>name </th>
-            <th>avatar </th>
-            <th>id </th>
-            <th>percentage </th>
+            <th> ID</th>
             <th>class </th>
+            <th>Father Name </th>
+            <th>percentage </th>
+            <th>Avathar</th>
+            <th>DOB</th>
             <th>Action</th>
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let a of student">
-
+        <tr *ngFor="let a of student; let i = index">
+            <td>{{i+1}}</td>
             <td>{{a.name}}</td>
+            <td>{{a.id}}</td>
+            <td>{{a.class}}</td>
+            <td>{{a.fatherName}}</td>
+            <td>{{a.percentage}}</td>
             <td>
                 <img src="{{a.avatar}}" alt="" height="100px" width="100px">
             </td>
-            <td>{{a.id}}</td>
-            <td>{{a.percentage}}</td>
-            <td>{{a.class}}</td>
+            <td>dob</td>
+            <td>{{a.action}}</td>
             <td>
                 <button (click)="deletestudent(a.id)">delete</button>
             </td>
