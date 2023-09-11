@@ -12,7 +12,8 @@ export class AllstudentpageComponent {
   public term:any = '';
   public column:any = "";
   public order:any = "";
-
+  public limit:any = "";
+  public page:any = "";
 
 
 
@@ -65,5 +66,15 @@ deletestudent(id:any){
   )
 }
 
+pagestudent(){
+  this.allstudentsService.pagedstudent(this.limit,this.page).subscribe(
+    (data:any)=>{
+      this.student = data;
+    },
+    (err:any)=>{
+      alert("Internal server error");
+    }
+  )
+}
 
 }
