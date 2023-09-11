@@ -9,7 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { AllstudentpageComponent } from './allstudentpage/allstudentpage.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { HttpClientModule } from '@angular/common/http'
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CreatestudentComponent } from './createstudent/createstudent.component';
 
 @NgModule({
@@ -27,6 +27,7 @@ import { CreatestudentComponent } from './createstudent/createstudent.component'
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    ReactiveFormsModule
 
   ],
   providers: [],

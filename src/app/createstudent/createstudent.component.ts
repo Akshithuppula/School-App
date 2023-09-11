@@ -20,8 +20,28 @@ export class CreatestudentComponent {
     state: new FormControl(),
     pincode: new FormControl()
   })
+ });
 
- })
- 
+ constructor(private createstudentService:CreatestudentService){}
 
+ submit(){
+  console.log(this.studentForm);
+
+  this.createstudentService.getCreateStudent(this.studentForm.value).subscribe(
+    (data:any)=>{
+      alert("student details created successfuly");
+    },
+    (err:any)=>{
+      alert("student details creation failed");
+    }
+  )
+
+
+  
+
+
+  
+ }
 }
+
+

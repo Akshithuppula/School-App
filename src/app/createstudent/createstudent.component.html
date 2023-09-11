@@ -1,22 +1,22 @@
 <div class="parent">
     
-    <form >
+    <form [formGroup]="studentForm" >
         
         <br>
         <label>Name:</label>
-        <input type="text">
+        <input type="text" formControlName="name">
         <br>
         <label>Class:</label>
-        <input type="text">
+        <input type="number" formControlName="class">
         <br>
         <label>Father Name:</label>
-        <input type="text">
+        <input type="text" formControlName="fathername">
         <br>
         <label>Email :</label>
-        <input type="text">
+        <input type="email" formControlName="email">
         <br>
         <label>bod:</label>
-        <input type="text">
+        <input type="text" formControlName="bod">
         <br>
     
         <div formGroupName="address">
@@ -37,7 +37,8 @@
 
         <br><br>
 
-        <button>Submit</button>
+
+        <button (click)="submit()">Submit</button>
         <br>
     </form>
 </div> 
