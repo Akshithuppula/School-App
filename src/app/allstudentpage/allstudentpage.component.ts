@@ -52,10 +52,18 @@ getsortbystudent(){
 
 
 
-
-
-
-
+deletestudent(id:any){
+  this.allstudentsService.deletestudent(id).subscribe(
+    (data:any)=>{
+      alert("delete successfull");
+      console.log(id)
+      location.reload();
+    },
+    (err:any)=>{
+      alert("Internal server error");
+    }
+  )
+}
 
 
 }

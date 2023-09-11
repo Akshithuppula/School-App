@@ -7,7 +7,7 @@
 </select>           &nbsp;&nbsp;
 
 
-<label>oreder :</label>
+<label>order :</label>
 <select [(ngModel)]="order">
     <option>asc</option>
     <option>desc</option>
@@ -24,6 +24,7 @@
             <th>id </th>
             <th>percentage </th>
             <th>class </th>
+            <th>Action</th>
         </tr>
     </thead>
     <tbody>
@@ -36,6 +37,9 @@
             <td>{{a.id}}</td>
             <td>{{a.percentage}}</td>
             <td>{{a.class}}</td>
+            <td>
+                <button (click)="deletestudent(a.id)">delete</button>
+            </td>
 
 
         </tr>
