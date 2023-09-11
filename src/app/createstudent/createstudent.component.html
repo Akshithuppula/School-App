@@ -18,10 +18,51 @@
         <label>bod:</label>
         <input type="text" formControlName="bod">
         <br>
-    
-        <button (click)="addMarks()">Add Marks</button>
+
+            <!-- Nested form -->
 
         <div formGroupName="address">
+
+            <label>City :</label>
+            <input type="text" formControlName="city">
+            <br>
+
+            <label>State:</label>
+            <input type="text" formControlName="state">
+            <br>
+
+            <label>PinCode:</label>
+            <input type="text" formControlName="pincode">
+            <br>
+
+        </div>
+
+        <!-- dynamic method -->
+
+        <label>type:</label>
+        <input type="radio" name="type" formControlName="type" value="dayScholor">
+        <label>day scholor</label>
+        <input type="radio" name="type" formControlName="type" value="residentail">
+        <label>residentail</label>
+
+        <div *ngIf="studentForm.get('type')?.value == 'dayScholor'">
+            <label>bus fee:</label>
+            <input type="number" formControlName="busFee">
+        </div>
+
+        <div *ngIf="studentForm.get('type')?.value == 'residentail'">
+            <label>hostel fee:</label>
+            <input type="number" formControlName="hostelFee">
+        </div>
+
+
+
+
+            <!-- form Array -->
+
+        <button (click)="addMarks()">Add Marks</button>
+
+        <div formArrayName="Marks">
 
             <div *ngFor="let mark of marksFormArray.controls; let i = index">
 

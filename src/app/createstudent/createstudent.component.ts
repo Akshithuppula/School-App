@@ -15,12 +15,18 @@ export class CreatestudentComponent {
   fathername: new FormControl(),
   email: new FormControl(),
   bod: new FormControl(),
+  // nested form
   address: new FormGroup({
     city: new FormControl(),
     state: new FormControl(),
     pincode: new FormControl()
   }),
-  marks: new FormArray([])
+  // dynamic
+  type: new FormControl(),
+  busFee: new FormControl(),
+  hostelFee: new FormControl(),
+  // form Array
+    marks: new FormArray([])
  });
 
  get marksFormArray(){
