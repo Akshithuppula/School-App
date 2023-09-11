@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CreatestudentService } from '../createstudent.service';
-import { FormArray, FormControl, FormGroup } from '@angular/forms';
+import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-createstudent',
@@ -10,16 +10,16 @@ import { FormArray, FormControl, FormGroup } from '@angular/forms';
 export class CreatestudentComponent {
 
  public studentForm:FormGroup = new FormGroup({
-  name: new FormControl(),
-  class: new FormControl(),
+  name: new FormControl("",[Validators.required, Validators.minLength(3)]),
+  class: new FormControl("",[Validators.required, Validators.min(0), Validators.max(100)]),
   fathername: new FormControl(),
   email: new FormControl(),
   bod: new FormControl(),
   // nested form
   address: new FormGroup({
     city: new FormControl(),
-    state: new FormControl(),
-    pincode: new FormControl()
+    state: new FormControl("",[Validators.required]),
+    pincode: new FormControl("",[Validators.required,Validators.min(100000),Validators.max(999999)])
   }),
   // dynamic
   type: new FormControl(),
